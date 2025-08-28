@@ -22,3 +22,9 @@ jobs:
         run: |
           echo "The repository ${{ github.repository }} contains the following files:"
           tree
+workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        type: environment
+        required: true
